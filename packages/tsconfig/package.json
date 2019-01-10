@@ -1,0 +1,11 @@
+{
+  "name": "@bluelovers/tsconfig",
+  "version": "1.0.0",
+  "description": "my base tsconfig",
+  "license": "ISC",
+  "author": "",
+  "main": "tsconfig.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "module": "CommonJS",
+    "target": "esnext",
+
+    "moduleResolution": "node",
+    "allowJs": false,
+
+    "sourceMap": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+
+    "declaration": true,
+    "experimentalDecorators": true,
+
+    "allowSyntheticDefaultImports": true,
+
+    "strict": false,
+
+    "resolveJsonModule": true,
+
+    "strictBindCallApply": true,
+
+    "locale": "zh-TW",
+    "pretty": true,
+
+    "removeComments": false,
+
+    "traceResolution": true,
+    "newLine": "lf"
+  }
+}
