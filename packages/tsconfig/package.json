@@ -2,10 +2,24 @@
   "name": "@bluelovers/tsconfig",
   "version": "1.0.0",
   "description": "my base tsconfig",
+  "keywords": [
+    "tsconfig"
+  ],
+  "homepage": "https://github.com/bluelovers/ws-node-bluelovers/tree/master/packages/tsconfig#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-node-bluelovers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-node-bluelovers.git"
+  },
   "license": "ISC",
   "author": "",
   "main": "tsconfig.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -26,3 +26,5 @@ __tests__
 /bin/**/*.d.ts
 /bin/*.d.ts
 !/tsconfig.json
+
+*.tgz
