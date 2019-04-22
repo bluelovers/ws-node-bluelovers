@@ -1,8 +1,11 @@
 {
   "name": "@bluelovers/tsconfig",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "my base tsconfig",
   "keywords": [
+    "preset",
+    "bluelovers",
+    "typescript",
     "tsconfig"
   ],
   "homepage": "https://github.com/bluelovers/ws-node-bluelovers/tree/master/packages/tsconfig#readme",
