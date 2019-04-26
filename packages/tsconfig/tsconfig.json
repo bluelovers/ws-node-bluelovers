@@ -23,6 +23,12 @@
 
     "strictBindCallApply": true,
 
+    "preserveConstEnums": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    "showConfig": true,
+
     "locale": "zh-TW",
     "pretty": true,
 
