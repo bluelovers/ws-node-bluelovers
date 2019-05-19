@@ -12,7 +12,7 @@
   },
   "rules": {
     "eol-last": [
-      "error",
+      "warn",
       "always"
     ],
     "no-compare-neg-zero": "error",
@@ -44,12 +44,31 @@
     "@typescript-eslint/member-ordering": "warn",
     "@typescript-eslint/prefer-includes": "warn",
     "@typescript-eslint/no-useless-constructor": "warn",
+    "@typescript-eslint/member-delimiter-style": [
+      "off",
+      {
+        "multiline": {
+          "delimiter": "comma",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": true
+        }
+      }
+    ],
+    "@typescript-eslint/explicit-function-return-type": [
+      "warn",
+      {
+        "allowExpressions": true
+      }
+    ],
     "@typescript-eslint/interface-name-prefix": [
       "warn",
       "always"
     ],
     "@typescript-eslint/promise-function-async": [
-      "warn",
+      "none",
       {
         "allowedPromiseNames": [
           "Thenable",
@@ -85,6 +104,15 @@
       "inside",
       {
         "functionPrototypeMethods": true
+      }
+    ],
+    "@typescript-eslint/no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true,
+        "variables": true,
+        "typedefs": false
       }
     ]
   }
