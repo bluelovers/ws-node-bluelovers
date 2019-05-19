@@ -2,7 +2,6 @@
   "name": "eslint-config-bluelovers",
   "version": "1.0.2",
   "description": "my eslint config with @typescript-eslint/eslint-plugin",
-  "preferGlobal": true,
   "keywords": [
     "bluelovers",
     "config",
@@ -35,5 +34,6 @@
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "*",
     "eslint": "*"
-  }
+  },
+  "preferGlobal": true
 }
