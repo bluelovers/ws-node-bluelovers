@@ -25,6 +25,9 @@
     "no-extra-bind": "error",
     "no-extra-label": "error",
     "no-extend-native": "error",
+    "no-irregular-whitespace": ["error", {
+      "skipComments": true
+    }],
     "camelcase": "off",
     "semi": "off",
     "@typescript-eslint/semi": [

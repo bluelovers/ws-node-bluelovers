@@ -23,6 +23,9 @@ declare const eslintrcJson: {
         "no-extra-bind": string;
         "no-extra-label": string;
         "no-extend-native": string;
+        "no-irregular-whitespace": (string | {
+            "skipComments": boolean;
+        })[];
         "camelcase": string;
         "semi": string;
         "@typescript-eslint/semi": string[];
@@ -37,6 +40,19 @@ declare const eslintrcJson: {
         "@typescript-eslint/member-ordering": string;
         "@typescript-eslint/prefer-includes": string;
         "@typescript-eslint/no-useless-constructor": string;
+        "@typescript-eslint/member-delimiter-style": (string | {
+            "multiline": {
+                "delimiter": string;
+                "requireLast": boolean;
+            };
+            "singleline": {
+                "delimiter": string;
+                "requireLast": boolean;
+            };
+        })[];
+        "@typescript-eslint/explicit-function-return-type": (string | {
+            "allowExpressions": boolean;
+        })[];
         "@typescript-eslint/interface-name-prefix": string[];
         "@typescript-eslint/promise-function-async": (string | {
             "allowedPromiseNames": string[];
@@ -60,6 +76,12 @@ declare const eslintrcJson: {
         "radix": string[];
         "wrap-iife": (string | {
             "functionPrototypeMethods": boolean;
+        })[];
+        "@typescript-eslint/no-use-before-define": (string | {
+            "functions": boolean;
+            "classes": boolean;
+            "variables": boolean;
+            "typedefs": boolean;
         })[];
     };
 };
