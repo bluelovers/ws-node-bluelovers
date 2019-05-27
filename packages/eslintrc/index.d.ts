@@ -25,6 +25,9 @@ declare const eslintrcJson: {
         "no-extend-native": string;
         "no-irregular-whitespace": (string | {
             "skipComments": boolean;
+            "skipStrings": boolean;
+            "skipTemplates": boolean;
+            "skipRegExps": boolean;
         })[];
         "camelcase": string;
         "semi": string;
@@ -37,6 +40,7 @@ declare const eslintrcJson: {
         "@typescript-eslint/restrict-plus-operands": string;
         "@typescript-eslint/member-naming": string;
         "@typescript-eslint/require-array-sort-compare": string;
+        "@typescript-eslint/no-angle-bracket-type-assertion": string;
         "@typescript-eslint/member-ordering": string;
         "@typescript-eslint/prefer-includes": string;
         "@typescript-eslint/no-useless-constructor": string;

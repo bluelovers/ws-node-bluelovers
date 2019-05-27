@@ -15,6 +15,9 @@
       "warn",
       "always"
     ],
+    "getter-return": ["error", {
+      "allowImplicit": true
+    }],
     "no-compare-neg-zero": "error",
     "no-dupe-args": "error",
     "no-dupe-keys": "error",
@@ -26,7 +29,10 @@
     "no-extra-label": "error",
     "no-extend-native": "error",
     "no-irregular-whitespace": ["error", {
-      "skipComments": true
+      "skipComments": true,
+      "skipStrings": false,
+      "skipTemplates": false,
+      "skipRegExps": false
     }],
     "camelcase": "off",
     "semi": "off",
@@ -34,16 +40,25 @@
       "warn",
       "always"
     ],
+    "symbol-description": "error",
+    "require-yield": "error",
+    "prefer-rest-params": "warn",
+    "object-shorthand": "error",
     "no-unexpected-multiline": "error",
     "@typescript-eslint/camelcase": "warn",
     "no-floating-decimal": "error",
+    "no-var": "error",
     "@typescript-eslint/unbound-method": "error",
+    "no-useless-rename": ["error", {
+      "ignoreDestructuring": true
+    }],
     "@typescript-eslint/indent": [
       "off"
     ],
     "@typescript-eslint/restrict-plus-operands": "warn",
     "@typescript-eslint/member-naming": "warn",
     "@typescript-eslint/require-array-sort-compare": "warn",
+    "@typescript-eslint/no-angle-bracket-type-assertion": "warn",
     "@typescript-eslint/member-ordering": "warn",
     "@typescript-eslint/prefer-includes": "warn",
     "@typescript-eslint/no-useless-constructor": "warn",
@@ -71,7 +86,7 @@
       "always"
     ],
     "@typescript-eslint/promise-function-async": [
-      "none",
+      "off",
       {
         "allowedPromiseNames": [
           "Thenable",
@@ -79,6 +94,11 @@
         ]
       }
     ],
+    "no-unused-expressions": ["warn", {
+      "allowShortCircuit": false,
+      "allowTernary": false
+    }],
+    "no-throw-literal": "error",
     "no-case-declarations": "error",
     "no-sequences": "error",
     "no-unmodified-loop-condition": "error",
@@ -88,16 +108,33 @@
     ],
     "no-div-regex": "warn",
     "no-multi-spaces": "warn",
+    "no-multi-str": "error",
+    "no-new": "error",
+    "no-proto": "warn",
+    "no-redeclare": "error",
+    "no-octal-escape": "error",
     "no-else-return": "warn",
-    "no-return-assign": "warn",
-    "no-return-await": "warn",
+    "no-return-assign": ["warn", "except-parens"],
+    "no-return-await": "error",
+    "no-self-compare": "error",
+    "no-catch-shadow": "error",
+    "no-label-var": "error",
+    "no-buffer-constructor": "error",
+    "no-shadow-restricted-names": "error",
     "no-useless-call": "warn",
     "no-useless-return": "warn",
-    "no-with": "warn",
-    "prefer-promise-reject-errors": "warn",
+    "no-unused-vars": "warn",
+    "arrow-parens": "warn",
+    "no-with": "error",
+    "prefer-promise-reject-errors": ["warn", {
+      "allowEmptyReject": true
+    }],
     "no-invalid-this": "warn",
     "require-await": "warn",
+    "no-self-assign": ["error", {"props": true}],
     "vars-on-top": "warn",
+    "no-useless-escape": "warn",
+    "no-shadow": "warn",
     "radix": [
       "warn",
       "as-needed"
