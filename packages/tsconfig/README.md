@@ -19,3 +19,10 @@ tsconfig.json inheritance via Node.js packages
     }
 }
 ```
+
+## docs
+
+- [TypeScript - Non-Null Assertion Operator !](https://www.logicbig.com/tutorials/misc/typescript/non-null-assertion-operator.html)
+- [TypeScript - Using --noImplicitThis flag](https://www.logicbig.com/tutorials/misc/typescript/no-implicit-this.html)
+- 
+
