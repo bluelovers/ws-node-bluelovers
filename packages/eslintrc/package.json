@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluelovers",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "my eslint config with @typescript-eslint/eslint-plugin",
   "keywords": [
     "bluelovers",
@@ -21,7 +21,7 @@
     "coverage": "npx nyc npm run test",
     "lint": "eslint .",
     "ncu": "npx npm-check-updates -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json && node ./scripts/sort-eslintrc.js",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,7 +29,8 @@
     "tsconfig": "^7.0.0"
   },
   "devDependencies": {
-    "@types/node": "*"
+    "@types/node": "*",
+    "sort-object-keys2": "^1.1.0"
   },
   "peerDependencies": {
     "@typescript-eslint/eslint-plugin": "*",
