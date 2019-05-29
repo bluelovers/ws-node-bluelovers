@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluelovers",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "my eslint config with @typescript-eslint/eslint-plugin",
   "keywords": [
     "bluelovers",
@@ -22,6 +22,7 @@
     "lint": "eslint .",
     "ncu": "npx npm-check-updates -u",
     "prepublishOnly": "npm run ncu && npm run sort-package-json && node ./scripts/sort-eslintrc.js",
+    "postpublish": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
