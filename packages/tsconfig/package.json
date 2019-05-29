@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/tsconfig",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "my base tsconfig",
   "keywords": [
     "preset",
@@ -20,6 +20,7 @@
   "author": "",
   "main": "tsconfig.json",
   "scripts": {
+    "postpublish": "git commit -m \"publish new version\" .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {
