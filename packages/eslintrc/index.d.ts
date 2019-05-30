@@ -93,6 +93,16 @@ declare const eslintrcJson: {
         "@typescript-eslint/explicit-function-return-type": (string | {
             "allowExpressions": boolean;
         })[];
+        "@typescript-eslint/explicit-member-accessibility": (string | {
+            "accessibility": string;
+            "overrides": {
+                "constructors": string;
+                "accessors": string;
+                "methods": string;
+                "properties": string;
+                "parameterProperties": string;
+            };
+        })[];
         "@typescript-eslint/indent": string[];
         "@typescript-eslint/interface-name-prefix": string[];
         "@typescript-eslint/member-delimiter-style": (string | {
@@ -110,20 +120,10 @@ declare const eslintrcJson: {
         })[];
         "@typescript-eslint/member-ordering": string;
         "@typescript-eslint/no-angle-bracket-type-assertion": string;
-        "@typescript-eslint/no-object-literal-type-assertion": string[];
         "@typescript-eslint/no-empty-interface": (string | {
             "allowSingleExtends": boolean;
         })[];
-        "@typescript-eslint/explicit-member-accessibility": (string | {
-            "accessibility": string;
-            "overrides": {
-                "constructors": string;
-                "accessors": string;
-                "methods": string;
-                "properties": string;
-                "parameterProperties": string;
-            };
-        })[];
+        "@typescript-eslint/no-object-literal-type-assertion": string[];
         "@typescript-eslint/no-use-before-define": (string | {
             "functions": boolean;
             "classes": boolean;

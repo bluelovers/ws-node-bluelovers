@@ -28,6 +28,7 @@ EslintrcJson.rules = sortObject(EslintrcJson.rules, {
 		['no-magic-numbers', '@typescript-eslint/no-magic-numbers',],
 		['camelcase', '@typescript-eslint/camelcase',],
 		['no-unused-vars', '@typescript-eslint/no-unused-vars',],
+		['no-use-before-define', '@typescript-eslint/no-use-before-define',],
 
 	], true),
 });

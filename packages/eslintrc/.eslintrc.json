@@ -11,14 +11,29 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "array-callback-return": "error",
     "arrow-parens": "warn",
+    "block-scoped-var": "error",
+    "consistent-return": [
+      "error",
+      {
+        "treatUndefinedAsUnspecified": true
+      }
+    ],
+    "default-case": [
+      "warn"
+    ],
+    "dot-notation": "warn",
     "eol-last": [
       "warn",
       "always"
     ],
     "eqeqeq": [
-      "warn",
-      "smart"
+      "error",
+      "smart",
+      {
+        "null": "ignore"
+      }
     ],
     "getter-return": [
       "error",
@@ -26,22 +41,44 @@
         "allowImplicit": true
       }
     ],
+    "no-alert": "error",
     "no-buffer-constructor": "error",
+    "no-caller": "error",
     "no-case-declarations": "error",
     "no-catch-shadow": "error",
     "no-compare-neg-zero": "error",
+    "no-control-regex": "error",
     "no-div-regex": "warn",
     "no-dupe-args": "error",
     "no-dupe-keys": "error",
     "no-duplicate-case": "error",
+    "no-duplicate-case:": "error",
     "no-else-return": "warn",
+    "no-empty": "error",
     "no-empty-character-class": "error",
+    "no-empty-function": "error",
+    "no-empty-pattern": "error",
+    "no-eq-null": "off",
+    "no-eval": "error",
     "no-ex-assign": "error",
     "no-extend-native": "error",
     "no-extra-bind": "error",
     "no-extra-label": "error",
     "no-extra-semi": "error",
+    "no-fallthrough": "warn",
     "no-floating-decimal": "error",
+    "no-func-assign": "error",
+    "no-implicit-coercion": [
+      "warn",
+      {
+        "boolean": false,
+        "allow": [
+          "|"
+        ]
+      }
+    ],
+    "no-implied-eval": "error",
+    "no-invalid-regexp": "error",
     "no-invalid-this": "warn",
     "no-irregular-whitespace": [
       "error",
@@ -52,13 +89,19 @@
         "skipRegExps": false
       }
     ],
+    "no-iterator": "error",
     "no-label-var": "error",
-    "no-multi-spaces": "warn",
+    "no-labels": "warn",
+    "no-multi-spaces": "error",
     "no-multi-str": "error",
     "no-new": "error",
+    "no-new-wrappers": "warn",
+    "no-obj-calls": "error",
     "no-octal-escape": "error",
     "no-proto": "warn",
+    "no-prototype-builtins": "error",
     "no-redeclare": "error",
+    "no-regex-spaces": "error",
     "no-return-assign": [
       "warn",
       "except-parens"
@@ -74,9 +117,15 @@
     "no-sequences": "error",
     "no-shadow": "warn",
     "no-shadow-restricted-names": "error",
+    "no-sparse-arrays": "error",
+    "no-template-curly-in-string": "error",
     "no-throw-literal": "error",
+    "no-undefined": "error",
     "no-unexpected-multiline": "error",
     "no-unmodified-loop-condition": "error",
+    "no-unreachable": "error",
+    "no-unsafe-finally": "error",
+    "no-unsafe-negation": "error",
     "no-unused-expressions": [
       "warn",
       {
@@ -84,8 +133,10 @@
         "allowTernary": false
       }
     ],
+    "no-unused-labels": "error",
     "no-unused-vars": "warn",
     "no-useless-call": "warn",
+    "no-useless-concat": "warn",
     "no-useless-escape": "warn",
     "no-useless-rename": [
       "error",
@@ -97,6 +148,7 @@
     "no-var": "error",
     "no-with": "error",
     "object-shorthand": "error",
+    "prefer-const": "warn",
     "prefer-promise-reject-errors": [
       "warn",
       {
@@ -109,8 +161,29 @@
       "as-needed"
     ],
     "require-await": "warn",
+    "require-unicode-regexp": "warn",
     "require-yield": "error",
     "symbol-description": "error",
+    "use-isnan": "error",
+    "valid-jsdoc": [
+      "warn",
+      {
+        "prefer": {
+          "arg": "param",
+          "argument": "param",
+          "class": "constructor",
+          "return": "returns",
+          "virtual": "abstract"
+        },
+        "requireReturnDescription": false
+      }
+    ],
+    "valid-typeof": [
+      "error",
+      {
+        "requireStringLiterals": true
+      }
+    ],
     "vars-on-top": "warn",
     "wrap-iife": [
       "error",
