@@ -30,10 +30,7 @@
     ],
     "eqeqeq": [
       "error",
-      "smart",
-      {
-        "null": "ignore"
-      }
+      "smart"
     ],
     "getter-return": [
       "error",
@@ -52,7 +49,6 @@
     "no-dupe-args": "error",
     "no-dupe-keys": "error",
     "no-duplicate-case": "error",
-    "no-duplicate-case:": "error",
     "no-else-return": "warn",
     "no-empty": "error",
     "no-empty-character-class": "error",
@@ -71,10 +67,7 @@
     "no-implicit-coercion": [
       "warn",
       {
-        "boolean": false,
-        "allow": [
-          "|"
-        ]
+        "boolean": false
       }
     ],
     "no-implied-eval": "error",

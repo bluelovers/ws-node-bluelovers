@@ -1,6 +1,3 @@
-/**
- * Created by user on 2019/5/18.
- */
 declare const eslintrcJson: {
     "parser": string;
     "extends": string[];

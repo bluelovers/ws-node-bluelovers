@@ -9,6 +9,9 @@ const eslintrcJson = {
 	...EslintrcJson,
 };
 
-eslintrcJson.parserOptions.project = TsconfigLib.resolveSync(process.cwd()) as string;
+if (!eslintrcJson.parserOptions.project)
+{
+	eslintrcJson.parserOptions.project = TsconfigLib.resolveSync(process.cwd()) as string;
+}
 
 export = eslintrcJson;
