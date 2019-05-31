@@ -7,9 +7,9 @@ import sortObject = require('sort-object-keys2');
 import fs = require('fs');
 import path = require('path');
 
-// @ts-ignore
-EslintrcJson.rules = sortObject(EslintrcJson.rules, {
-	keys: orderTweak(Object.keys(EslintrcJson.rules).sort().sort(function (a, b)
+let keys = Object.keys(EslintrcJson.rules)
+	.sort()
+	.sort(function (a, b)
 	{
 		// @ts-ignore
 		let i1 = a.startsWith('@') | 0;
@@ -19,16 +19,33 @@ EslintrcJson.rules = sortObject(EslintrcJson.rules, {
 		let r = i1 - i2;
 
 		return r
-	}), [
+	})
+;
 
-		['semi', '@typescript-eslint/semi',],
-		['no-extra-parens', '@typescript-eslint/no-extra-parens',],
-		['func-call-spacing', '@typescript-eslint/func-call-spacing',],
-		['indent', '@typescript-eslint/indent',],
-		['no-magic-numbers', '@typescript-eslint/no-magic-numbers',],
-		['camelcase', '@typescript-eslint/camelcase',],
-		['no-unused-vars', '@typescript-eslint/no-unused-vars',],
-		['no-use-before-define', '@typescript-eslint/no-use-before-define',],
+// @ts-ignore
+EslintrcJson.rules = sortObject(EslintrcJson.rules, {
+	keys: orderTweak(keys, [
+
+		...keys.reduce((a, b) => {
+
+			if (/^@typescript-eslint\/(.+)$/.test(b))
+			{
+				a.push([RegExp.$1, b])
+			}
+
+			return a
+		}, [] as string[][]),
+
+		/*
+		['semi', '@typescript-eslint/semi'],
+		['no-extra-parens', '@typescript-eslint/no-extra-parens'],
+		['func-call-spacing', '@typescript-eslint/func-call-spacing'],
+		['indent', '@typescript-eslint/indent'],
+		['no-magic-numbers', '@typescript-eslint/no-magic-numbers'],
+		['camelcase', '@typescript-eslint/camelcase'],
+		['no-unused-vars', '@typescript-eslint/no-unused-vars'],
+		['no-use-before-define', '@typescript-eslint/no-use-before-define'],
+		 */
 
 	], true),
 });
@@ -43,10 +60,12 @@ export function orderTweak<T extends string>(keys: T[], groups: (T | string)[][]
 
 	mode = !!mode;
 
-	groups.forEach(ls => {
+	groups.forEach(ls =>
+	{
 		if (ls.length > 1)
 		{
-			ls.reduce((p: T, k: T) => {
+			ls.reduce((p: T, k: T) =>
+			{
 
 				let pi = ret.indexOf(p);
 				let ki = ret.indexOf(k);
