@@ -18,9 +18,7 @@ declare const eslintrcJson: {
         "default-case": string[];
         "dot-notation": string;
         "eol-last": string[];
-        "eqeqeq": (string | {
-            "null": string;
-        })[];
+        "eqeqeq": string[];
         "getter-return": (string | {
             "allowImplicit": boolean;
         })[];
@@ -35,7 +33,6 @@ declare const eslintrcJson: {
         "no-dupe-args": string;
         "no-dupe-keys": string;
         "no-duplicate-case": string;
-        "no-duplicate-case:": string;
         "no-else-return": string;
         "no-empty": string;
         "no-empty-character-class": string;
@@ -53,7 +50,6 @@ declare const eslintrcJson: {
         "no-func-assign": string;
         "no-implicit-coercion": (string | {
             "boolean": boolean;
-            "allow": string[];
         })[];
         "no-implied-eval": string;
         "no-invalid-regexp": string;
