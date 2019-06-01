@@ -8,9 +8,18 @@ import { findRoot } from '@yarn-tool/find-root';
 import fs = require('fs');
 import path = require('path');
 import { findTsconfig } from '@yarn-tool/find-tsconfig';
+import noIrregularWhitespace = require('../eslint-plugin/rule/no-irregular-whitespace');
 
 const eslintrcJson = {
 	...EslintrcJson,
+
+	/*
+	rules: Object.assign({
+		...EslintrcJson.rules,
+	}, {
+		'@bluelovers/no-irregular-whitespace': noIrregularWhitespace,
+	})
+	 */
 };
 
 delete eslintrcJson.parserOptions.project;

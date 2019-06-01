@@ -1,7 +1,11 @@
 {
   "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@bluelovers"
+  ],
   "extends": [
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@bluelovers/recommended"
   ],
   "env": {
     "browser": true,
@@ -74,7 +78,7 @@
     "no-invalid-regexp": "error",
     "no-invalid-this": "warn",
     "no-irregular-whitespace": [
-      "error",
+      "off",
       {
         "skipComments": true,
         "skipStrings": false,
