@@ -37,6 +37,9 @@ export interface IOptions
 export type IOptionsArray = [IOptions];
 
 export default {
+
+	name: "no-irregular-whitespace",
+
 	meta: {
 		type: "problem",
 
@@ -79,10 +82,13 @@ export default {
 		],
 	},
 
-	defaultOptions: <IOptions>{
-		skipComments: true,
-		ignores: ['\u3000'],
-	},
+	defaultOptions: ["error", <IOptions>{
+		"skipComments": false,
+		"skipStrings": false,
+		"skipTemplates": false,
+		"skipRegExps": false,
+		ignores: [],
+	}],
 
 	create(context: RuleContext<string, IOptionsArray>)
 	{
@@ -97,7 +103,7 @@ export default {
 		const skipRegExps = !!options.skipRegExps;
 		const skipTemplates = !!options.skipTemplates;
 		const ignores = options.ignores || [];
-		const ignoresRe = new RegExp(ignores.map(c => `${c.codePointAt(0).toString(16)}`).join("|"), "gu");
+		const ignoresRe: RegExp = ignores.length && new RegExp(ignores.map(c => `${c.codePointAt(0).toString(16)}`).join("|"), "gu");
 
 		const sourceCode = context.getSourceCode();
 		const commentNodes = sourceCode.getAllComments();

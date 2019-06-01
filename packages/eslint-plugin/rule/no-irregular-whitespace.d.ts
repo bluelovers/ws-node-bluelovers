@@ -13,6 +13,7 @@ export interface IOptions {
 }
 export declare type IOptionsArray = [IOptions];
 declare const _default: {
+    readonly name: "no-irregular-whitespace";
     meta: {
         readonly type: "problem";
         docs: {
@@ -50,7 +51,7 @@ declare const _default: {
             readonly additionalProperties: false;
         }];
     };
-    readonly defaultOptions: IOptions;
+    readonly defaultOptions: readonly ["error", IOptions];
     readonly create: (context: TSESLint.RuleContext<string, [IOptions]>) => {
         "Program:exit"?: () => void;
         Program?(node: TSESTree.Program): void;
