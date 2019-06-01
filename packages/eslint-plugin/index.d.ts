@@ -5,6 +5,7 @@ import { IOptions } from './rule/no-irregular-whitespace';
 declare const _default: {
     rules: {
         readonly "no-template-literals": {
+            readonly name: "no-irregular-whitespace";
             meta: {
                 readonly type: "problem";
                 docs: {
@@ -42,7 +43,7 @@ declare const _default: {
                     readonly additionalProperties: false;
                 }];
             };
-            readonly defaultOptions: IOptions;
+            readonly defaultOptions: readonly ["error", IOptions];
             readonly create: (context: import("@typescript-eslint/experimental-utils/dist/ts-eslint/Rule").RuleContext<string, [IOptions]>) => {
                 "Program:exit"?: () => void;
                 Program?(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Program): void;
@@ -54,18 +55,21 @@ declare const _default: {
     };
     configs: {
         all: {
+            plugins: string[];
             rules: {
                 "no-irregular-whitespace": (string | IOptions)[];
                 "@bluelovers/no-irregular-whitespace": (string | IOptions)[];
             };
         };
         base: {
+            plugins: string[];
             rules: {
                 "no-irregular-whitespace": (string | IOptions)[];
                 "@bluelovers/no-irregular-whitespace": (string | IOptions)[];
             };
         };
         recommended: {
+            plugins: string[];
             rules: {
                 "no-irregular-whitespace": (string | IOptions)[];
                 "@bluelovers/no-irregular-whitespace": (string | IOptions)[];

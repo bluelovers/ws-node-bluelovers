@@ -3,6 +3,7 @@
  */
 declare const rules: {
     readonly "no-template-literals": {
+        readonly name: "no-irregular-whitespace";
         meta: {
             readonly type: "problem";
             docs: {
@@ -40,7 +41,7 @@ declare const rules: {
                 readonly additionalProperties: false;
             }];
         };
-        readonly defaultOptions: import("./no-irregular-whitespace").IOptions;
+        readonly defaultOptions: readonly ["error", import("./no-irregular-whitespace").IOptions];
         readonly create: (context: import("@typescript-eslint/experimental-utils/dist/ts-eslint/Rule").RuleContext<string, [import("./no-irregular-whitespace").IOptions]>) => {
             "Program:exit"?: () => void;
             Program?(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Program): void;

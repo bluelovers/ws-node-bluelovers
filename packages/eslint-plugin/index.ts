@@ -9,6 +9,8 @@ import { IOptions } from './rule/no-irregular-whitespace';
 import cloneDeep = require('lodash.clonedeep');
 
 const _config = {
+	plugins: ["@bluelovers"],
+
 	rules: {
 		// @ts-ignore
 		"no-irregular-whitespace": [
@@ -32,22 +34,18 @@ const _config = {
 	},
 };
 
-const recommended: typeof _config = {
-	...cloneDeep(_config),
-	rules: {
-		...cloneDeep(_config.rules),
-		"@bluelovers/no-irregular-whitespace": [
-			"error",
-			{
-				"skipComments": true,
-				"skipStrings": false,
-				"skipTemplates": false,
-				"skipRegExps": false,
-				"ignores": ['\u3000'],
-			} as IOptions,
-		]
-	}
-};
+const recommended: typeof _config = cloneDeep(_config);
+
+recommended.rules['@bluelovers/no-irregular-whitespace'] = [
+	"error",
+	{
+		"skipComments": true,
+		"skipStrings": false,
+		"skipTemplates": false,
+		"skipRegExps": false,
+		"ignores": ['\u3000'],
+	},
+];
 
 export = {
 
