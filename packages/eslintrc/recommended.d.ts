@@ -1,5 +1,15 @@
 declare const eslintrcJson: {
-    rules: {
+    "parser": string;
+    "plugins": string[];
+    "extends": string[];
+    "env": {
+        "browser": boolean;
+        "node": boolean;
+    };
+    "parserOptions": {
+        "project": string;
+    };
+    "rules": {
         "array-callback-return": string;
         "arrow-parens": string;
         "block-scoped-var": string;
@@ -181,17 +191,6 @@ declare const eslintrcJson: {
         "semi": string;
         "@typescript-eslint/semi": string[];
         "@typescript-eslint/unbound-method": string;
-    } & {
-        '@bluelovers/no-irregular-whitespace': typeof import("./eslint-plugin/rule/no-irregular-whitespace");
-    };
-    "parser": string;
-    "extends": string[];
-    "env": {
-        "browser": boolean;
-        "node": boolean;
-    };
-    "parserOptions": {
-        "project": string;
     };
 };
 export = eslintrcJson;

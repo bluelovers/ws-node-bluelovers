@@ -3,12 +3,7 @@
  */
 
 import EslintrcJson = require('./.eslintrc.json');
-import TsconfigLib = require('tsconfig');
-import { findRoot } from '@yarn-tool/find-root';
-import fs = require('fs');
-import path = require('path');
 import { findTsconfig } from '@yarn-tool/find-tsconfig';
-import noIrregularWhitespace = require('../eslint-plugin/rule/no-irregular-whitespace');
 
 const eslintrcJson = {
 	...EslintrcJson,

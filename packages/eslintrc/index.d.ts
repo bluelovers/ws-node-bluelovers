@@ -3,6 +3,7 @@
  */
 declare const eslintrcJson: {
     "parser": string;
+    "plugins": string[];
     "extends": string[];
     "env": {
         "browser": boolean;
