@@ -14,7 +14,17 @@ import {
 	TSESLint,
 } from '@typescript-eslint/experimental-utils';
 import { Literal } from '@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree';
-import { RuleModule, RuleMetaData, RuleContext } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
+
+import {
+	// @ts-ignore
+	RuleModule,
+	// @ts-ignore
+	RuleMetaData,
+	// @ts-ignore
+	RuleContext,
+	// @ts-ignore
+	ReportDescriptor,
+} from '@typescript-eslint/experimental-utils/dist/ts-eslint';
 
 const ALL_IRREGULARS = /[\f\v\u0085\ufeff\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u202f\u205f\u3000\u2028\u2029]/u;
 const IRREGULAR_WHITESPACE = /[\f\v\u0085\ufeff\u00a0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u202f\u205f\u3000]+/mgu;
@@ -36,7 +46,7 @@ export interface IOptions
 
 export type IOptionsArray = [IOptions];
 
-export default {
+const noIrregularWhitespace = {
 
 	name: "no-irregular-whitespace",
 
@@ -48,6 +58,10 @@ export default {
 			category: "Possible Errors",
 			recommended: true,
 			url: "https://eslint.org/docs/rules/no-irregular-whitespace",
+		},
+
+		messages: {
+			noIrregularWhitespace: "Irregular whitespace not allowed."
 		},
 
 		schema: [
@@ -82,19 +96,21 @@ export default {
 		],
 	},
 
-	defaultOptions: ["error", <IOptions>{
-		"skipComments": false,
-		"skipStrings": false,
-		"skipTemplates": false,
-		"skipRegExps": false,
-		ignores: [],
-	}],
+	defaultOptions: [
+		"error", <IOptions>{
+			"skipComments": false,
+			"skipStrings": false,
+			"skipTemplates": false,
+			"skipRegExps": false,
+			ignores: [],
+		},
+	],
 
 	create(context: RuleContext<string, IOptionsArray>)
 	{
 
 		// Module store of errors that we have found
-		let errors = [];
+		let errors: ReportDescriptor[] = [];
 
 		// Lookup the `skipComments` option, which defaults to `false`.
 		const options = context.options[0] || {};
@@ -113,36 +129,37 @@ export default {
 				return null;
 			}
 
+			/* eslint-disable no-else-return, indent */
 			let source = ignores
 				.map(c =>
 				{
-					if (c === '\f' || c === '\\f' || c === '\\\\f')
+					if (c === "\f" || c === "\\f" || c === "\\\\f")
 					{
-						return '\\\\f';
+						return "\\\\f";
 					}
-					else if (c === '\v' || c === '\\v' || c === '\\\\v')
+					else if (c === "\v" || c === "\\v" || c === "\\\\v")
 					{
-						return '\\\\v';
+						return "\\\\v";
 					}
-					else if (c.startsWith('\\\\u'))
+					else if (c.startsWith("\\\\u"))
 					{
 						return c;
 					}
 					else if (c.length === 1)
 					{
-						return `\\\\u${c.codePointAt(0).toString(16)}`
+						return `\\\\u${c.codePointAt(0).toString(16)}`;
 					}
-					else if (c.startsWith('\\\\'))
+					else if (c.startsWith("\\\\"))
 					{
-						return c
+						return c;
 					}
 
-					throw new TypeError(`${c} \\u${c.codePointAt(0).toString(16)}`)
+					throw new TypeError(`${c} \\u${c.codePointAt(0).toString(16)}`);
 				})
 				.join("|")
 			;
 
-			return new RegExp(source, 'ug')
+			return new RegExp(source, "ug");
 		}
 
 		const ignoresRe: RegExp = handleIgnoreRe(options.ignores || []);
@@ -267,7 +284,7 @@ export default {
 						column: match.index,
 					};
 
-					errors.push({ node, message: "Irregular whitespace not allowed.", loc: location });
+					pushError(node, location);
 				}
 			});
 		}
@@ -294,9 +311,19 @@ export default {
 					column: sourceLines[lineIndex].length,
 				};
 
-				errors.push({ node, message: "Irregular whitespace not allowed.", loc: location });
+				pushError(node, location);
 				lastLineIndex = lineIndex;
 			}
+		}
+
+		function pushError(node: TSESTree.BaseNode, loc: TSESTree.SourceLocation | TSESTree.LineAndColumnData)
+		{
+			errors.push({
+				node,
+				messageId: "noIrregularWhitespace",
+				//message: "Irregular whitespace not allowed.",
+				loc,
+			});
 		}
 
 		/**
@@ -311,14 +338,14 @@ export default {
 			//[k in AST_NODE_TYPES]?: (node?: TSESTree.Node) => void
 		} & {
 
-			"Program:exit"?: () => void;
+			"Program:exit": () => void;
 
-			Program?(node: TSESTree.Program): void;
-			Identifier?(node: TSESTree.Literal): void;
-			Literal?(node: TSESTree.Literal): void;
-			TemplateElement?(node: TSESTree.TemplateElement): void;
+			Program(node: TSESTree.Program): void;
+			Identifier(node: TSESTree.Literal): void;
+			Literal(node: TSESTree.Literal): void;
+			TemplateElement(node: TSESTree.TemplateElement): void;
 
-		} = {};
+		} = {} as any;
 
 		if (ALL_IRREGULARS_LOCAL.test(sourceCode.getText()))
 		{
@@ -363,3 +390,5 @@ export default {
 		return nodes;
 	},
 } as const;
+
+export default noIrregularWhitespace

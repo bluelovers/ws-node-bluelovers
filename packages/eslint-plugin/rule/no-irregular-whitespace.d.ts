@@ -3,7 +3,7 @@
  * @author Jonathan Kingston
  * @author Christophe Porteneuve
  */
-import { TSESTree, TSESLint } from '@typescript-eslint/experimental-utils';
+import { TSESTree } from '@typescript-eslint/experimental-utils';
 export interface IOptions {
     skipComments?: boolean;
     skipStrings?: boolean;
@@ -12,7 +12,7 @@ export interface IOptions {
     ignores?: string[];
 }
 export declare type IOptionsArray = [IOptions];
-declare const _default: {
+declare const noIrregularWhitespace: {
     readonly name: "no-irregular-whitespace";
     meta: {
         readonly type: "problem";
@@ -21,6 +21,9 @@ declare const _default: {
             readonly category: "Possible Errors";
             readonly recommended: true;
             readonly url: "https://eslint.org/docs/rules/no-irregular-whitespace";
+        };
+        messages: {
+            readonly noIrregularWhitespace: "Irregular whitespace not allowed.";
         };
         schema: readonly [{
             readonly type: "object";
@@ -52,12 +55,12 @@ declare const _default: {
         }];
     };
     readonly defaultOptions: readonly ["error", IOptions];
-    readonly create: (context: TSESLint.RuleContext<string, [IOptions]>) => {
-        "Program:exit"?: () => void;
-        Program?(node: TSESTree.Program): void;
-        Identifier?(node: TSESTree.Literal): void;
-        Literal?(node: TSESTree.Literal): void;
-        TemplateElement?(node: TSESTree.TemplateElement): void;
+    readonly create: (context: any) => {
+        "Program:exit": () => void;
+        Program(node: TSESTree.Program): void;
+        Identifier(node: TSESTree.Literal): void;
+        Literal(node: TSESTree.Literal): void;
+        TemplateElement(node: TSESTree.TemplateElement): void;
     };
 };
-export default _default;
+export default noIrregularWhitespace;

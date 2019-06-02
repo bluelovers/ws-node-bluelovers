@@ -68,3 +68,7 @@ coverage
 !.gitlab
 .git
 
+!/test/rule/
+!/test/rule/*.ts
+/test/rule/*.d.ts
+

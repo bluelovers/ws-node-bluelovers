@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/eslint-plugin",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "keywords": [
     "bluelovers",
@@ -23,10 +23,10 @@
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
     "ncu": "npx yarn-tool ncu -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json",
+    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run test",
     "postpublish": "git commit -m \"publish new version\" .",
     "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx ts-node ./test/rule/no-irregular-whitespace"
   },
   "dependencies": {
     "lodash.clonedeep": "^4.5.0"
