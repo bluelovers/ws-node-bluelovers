@@ -102,11 +102,50 @@ export default {
 		const skipStrings = options.skipStrings !== false;
 		const skipRegExps = !!options.skipRegExps;
 		const skipTemplates = !!options.skipTemplates;
-		const ignores = options.ignores || [];
-		const ignoresRe: RegExp = ignores.length && new RegExp(ignores.map(c => `${c.codePointAt(0).toString(16)}`).join("|"), "gu");
 
 		const sourceCode = context.getSourceCode();
 		const commentNodes = sourceCode.getAllComments();
+
+		function handleIgnoreRe(ignores: string[])
+		{
+			if (!ignores || !ignores.length)
+			{
+				return null;
+			}
+
+			let source = ignores
+				.map(c =>
+				{
+					if (c === '\f' || c === '\\f' || c === '\\\\f')
+					{
+						return '\\\\f';
+					}
+					else if (c === '\v' || c === '\\v' || c === '\\\\v')
+					{
+						return '\\\\v';
+					}
+					else if (c.startsWith('\\\\u'))
+					{
+						return c;
+					}
+					else if (c.length === 1)
+					{
+						return `\\\\u${c.codePointAt(0).toString(16)}`
+					}
+					else if (c.startsWith('\\\\'))
+					{
+						return c
+					}
+
+					throw new TypeError(`${c} \\u${c.codePointAt(0).toString(16)}`)
+				})
+				.join("|")
+			;
+
+			return new RegExp(source, 'ug')
+		}
+
+		const ignoresRe: RegExp = handleIgnoreRe(options.ignores || []);
 
 		/**
 		 * remove regexp in ignores
@@ -116,11 +155,14 @@ export default {
 		 */
 		function removeRegexClass(re: RegExp)
 		{
-			if (!ignores.length)
+			if (!ignoresRe)
 			{
 				return re;
 			}
-			return new RegExp(re.source.replace(ignoresRe, ""), re.flags);
+
+			let source = re.source.replace(ignoresRe, "");
+
+			return new RegExp(source, re.flags);
 		}
 
 		const ALL_IRREGULARS_LOCAL = removeRegexClass(ALL_IRREGULARS);
