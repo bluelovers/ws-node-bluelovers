@@ -158,6 +158,18 @@
       "as-needed"
     ],
     "require-await": "warn",
+    "require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true,
+          "FunctionExpression": true
+        }
+      }
+    ],
     "require-unicode-regexp": "warn",
     "require-yield": "error",
     "symbol-description": "error",

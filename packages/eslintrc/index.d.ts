@@ -84,6 +84,15 @@ declare const eslintrcJson: {
         })[];
         "no-self-compare": string;
         "no-sequences": string;
+        "require-jsdoc": (string | {
+            "require": {
+                "FunctionDeclaration": boolean;
+                "MethodDefinition": boolean;
+                "ClassDeclaration": boolean;
+                "ArrowFunctionExpression": boolean;
+                "FunctionExpression": boolean;
+            };
+        })[];
         "no-shadow": string;
         "no-shadow-restricted-names": string;
         "no-sparse-arrays": string;
