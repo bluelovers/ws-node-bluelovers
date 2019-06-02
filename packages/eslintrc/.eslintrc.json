@@ -5,7 +5,7 @@
   ],
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "plugin:@bluelovers/recommended"
+    "plugin:@bluelovers/disable"
   ],
   "env": {
     "browser": true,
