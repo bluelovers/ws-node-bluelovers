@@ -4,7 +4,7 @@
 import { IOptions } from './rule/no-irregular-whitespace';
 declare const _default: {
     rules: {
-        readonly "no-template-literals": {
+        readonly "@bluelovers/no-irregular-whitespace": {
             readonly name: "no-irregular-whitespace";
             meta: {
                 readonly type: "problem";
@@ -13,6 +13,9 @@ declare const _default: {
                     readonly category: "Possible Errors";
                     readonly recommended: true;
                     readonly url: "https://eslint.org/docs/rules/no-irregular-whitespace";
+                };
+                messages: {
+                    readonly noIrregularWhitespace: "Irregular whitespace not allowed.";
                 };
                 schema: readonly [{
                     readonly type: "object";
@@ -44,12 +47,12 @@ declare const _default: {
                 }];
             };
             readonly defaultOptions: readonly ["error", IOptions];
-            readonly create: (context: import("@typescript-eslint/experimental-utils/dist/ts-eslint/Rule").RuleContext<string, [IOptions]>) => {
-                "Program:exit"?: () => void;
-                Program?(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Program): void;
-                Identifier?(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Literal): void;
-                Literal?(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Literal): void;
-                TemplateElement?(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").TemplateElement): void;
+            readonly create: (context: any) => {
+                "Program:exit": () => void;
+                Program(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Program): void;
+                Identifier(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Literal): void;
+                Literal(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Literal): void;
+                TemplateElement(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").TemplateElement): void;
             };
         };
     };
@@ -73,6 +76,11 @@ declare const _default: {
             rules: {
                 "no-irregular-whitespace": (string | IOptions)[];
                 "@bluelovers/no-irregular-whitespace": (string | IOptions)[];
+            };
+        };
+        disable: {
+            rules: {
+                "@bluelovers/no-irregular-whitespace": string;
             };
         };
     };

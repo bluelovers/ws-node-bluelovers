@@ -5,7 +5,7 @@
 import noIrregularWhitespace from './no-irregular-whitespace';
 
 const rules = {
-	"no-template-literals": noIrregularWhitespace,
+	"@bluelovers/no-irregular-whitespace": noIrregularWhitespace,
 } as const;
 
 export default rules

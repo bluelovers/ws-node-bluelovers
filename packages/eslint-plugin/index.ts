@@ -55,6 +55,11 @@ export = {
 		all: cloneDeep(_config) as typeof _config,
 		base: cloneDeep(_config) as typeof _config,
 		recommended,
+		disable: {
+			rules: {
+				"@bluelovers/no-irregular-whitespace": "off",
+			}
+		}
 	},
 
 };
