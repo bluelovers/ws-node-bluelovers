@@ -78,7 +78,7 @@
     "no-invalid-regexp": "error",
     "no-invalid-this": "warn",
     "no-irregular-whitespace": [
-      "off",
+      "error",
       {
         "skipComments": true,
         "skipStrings": false,

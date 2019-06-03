@@ -81,15 +81,6 @@ declare const eslintrcJson: {
         })[];
         "no-self-compare": string;
         "no-sequences": string;
-        "require-jsdoc": (string | {
-            "require": {
-                "FunctionDeclaration": boolean;
-                "MethodDefinition": boolean;
-                "ClassDeclaration": boolean;
-                "ArrowFunctionExpression": boolean;
-                "FunctionExpression": boolean;
-            };
-        })[];
         "no-shadow": string;
         "no-shadow-restricted-names": string;
         "no-sparse-arrays": string;
@@ -124,6 +115,15 @@ declare const eslintrcJson: {
         "prefer-rest-params": string;
         "radix": string[];
         "require-await": string;
+        "require-jsdoc": (string | {
+            "require": {
+                "FunctionDeclaration": boolean;
+                "MethodDefinition": boolean;
+                "ClassDeclaration": boolean;
+                "ArrowFunctionExpression": boolean;
+                "FunctionExpression": boolean;
+            };
+        })[];
         "require-unicode-regexp": string;
         "require-yield": string;
         "symbol-description": string;
