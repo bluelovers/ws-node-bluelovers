@@ -6,6 +6,8 @@
     "moduleResolution": "node",
     "allowJs": false,
 
+    "allowUmdGlobalAccess": false,
+
     "sourceMap": false,
     "inlineSourceMap": true,
     "inlineSources": true,
