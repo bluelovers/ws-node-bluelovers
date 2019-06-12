@@ -33,6 +33,8 @@
 
     "showConfig": true,
 
+    "incremental": true,
+
     "locale": "zh-TW",
     "pretty": true,
 
