@@ -56,3 +56,4 @@ tests/temp*
 *.test.js.map
 
 *.tgz
+node_modules
