@@ -39,5 +39,6 @@
     "@typescript-eslint/eslint-plugin": "*",
     "eslint": "*"
   },
-  "preferGlobal": true
+  "preferGlobal": true,
+  "gitHead": "f6d5deeed50a1ad2858f3e9c8b34667146c4f4d8"
 }
