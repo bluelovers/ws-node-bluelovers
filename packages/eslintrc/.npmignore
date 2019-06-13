@@ -57,6 +57,6 @@ webpack.*.config.ts
 karma.conf.js
 /_config.yml
 intellij-style-guide.xml
-!/.eslintrc.json
-!/.eslintignore
+!.eslintrc.json
+!.eslintignore
 /scripts/

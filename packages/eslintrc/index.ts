@@ -4,6 +4,7 @@
 
 import EslintrcJson = require('./.eslintrc.json');
 import { findTsconfig } from '@yarn-tool/find-tsconfig';
+import { addTsconfig } from './lib/util';
 
 const eslintrcJson = {
 	...EslintrcJson,
@@ -17,16 +18,8 @@ const eslintrcJson = {
 	 */
 };
 
-delete eslintrcJson.parserOptions.project;
-
-if (!eslintrcJson.parserOptions.project)
-{
-	let file = findTsconfig(process.cwd());
-
-	if (file)
-	{
-		eslintrcJson.parserOptions.project = file;
-	}
-}
+addTsconfig(eslintrcJson, {
+	overwrite: true,
+});
 
 export = eslintrcJson;
