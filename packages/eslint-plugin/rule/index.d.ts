@@ -45,7 +45,7 @@ declare const rules: {
             }];
         };
         readonly defaultOptions: readonly ["error", import("./no-irregular-whitespace").IOptions];
-        readonly create: (context: any) => {
+        readonly create: (context: import("@typescript-eslint/experimental-utils/dist/ts-eslint/Rule").RuleContext<string, [import("./no-irregular-whitespace").IOptions]>) => {
             "Program:exit": () => void;
             Program(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Program): void;
             Identifier(node: import("@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree").Literal): void;

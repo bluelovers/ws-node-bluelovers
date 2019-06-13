@@ -3,7 +3,7 @@
  * @author Jonathan Kingston
  * @author Christophe Porteneuve
  */
-import { TSESTree } from '@typescript-eslint/experimental-utils';
+import { TSESTree, TSESLint } from '@typescript-eslint/experimental-utils';
 export interface IOptions {
     skipComments?: boolean;
     skipStrings?: boolean;
@@ -55,7 +55,7 @@ declare const noIrregularWhitespace: {
         }];
     };
     readonly defaultOptions: readonly ["error", IOptions];
-    readonly create: (context: any) => {
+    readonly create: (context: TSESLint.RuleContext<string, [IOptions]>) => {
         "Program:exit": () => void;
         Program(node: TSESTree.Program): void;
         Identifier(node: TSESTree.Literal): void;

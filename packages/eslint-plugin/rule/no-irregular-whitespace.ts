@@ -110,7 +110,7 @@ const noIrregularWhitespace = {
 	{
 
 		// Module store of errors that we have found
-		let errors: ReportDescriptor[] = [];
+		let errors: ReportDescriptor<'noIrregularWhitespace'>[] = [];
 
 		// Lookup the `skipComments` option, which defaults to `false`.
 		const options = context.options[0] || {};
@@ -198,8 +198,10 @@ const noIrregularWhitespace = {
 
 			errors = errors.filter(({ loc: errorLoc }) =>
 			{
+				// @ts-ignore
 				if (errorLoc.line >= locStart.line && errorLoc.line <= locEnd.line)
 				{
+					// @ts-ignore
 					if (errorLoc.column >= locStart.column && (errorLoc.column <= locEnd.column || errorLoc.line < locEnd.line))
 					{
 						return false;
@@ -319,6 +321,7 @@ const noIrregularWhitespace = {
 		function pushError(node: TSESTree.BaseNode, loc: TSESTree.SourceLocation | TSESTree.LineAndColumnData)
 		{
 			errors.push({
+				// @ts-ignore
 				node,
 				messageId: "noIrregularWhitespace",
 				//message: "Irregular whitespace not allowed.",
