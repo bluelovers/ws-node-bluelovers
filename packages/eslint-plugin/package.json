@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/eslint-plugin",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "keywords": [
     "bluelovers",
@@ -16,9 +16,20 @@
     "ts",
     "typescript"
   ],
+  "homepage": "https://github.com/bluelovers/ws-node-bluelovers#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-node-bluelovers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-node-bluelovers.git"
+  },
   "license": "ISC",
   "author": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "coverage": "npx nyc npm run test",
     "lint": "npx eslint **/*.ts",
@@ -32,10 +43,9 @@
     "lodash.clonedeep": "^4.5.0"
   },
   "devDependencies": {
-    "@typescript-eslint/experimental-utils": "^1.10.2"
+    "@typescript-eslint/experimental-utils": "^1.11.0"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "gitHead": "2a722b66df94727769dd9b7a33454afb7f7c7e97"
+  }
 }

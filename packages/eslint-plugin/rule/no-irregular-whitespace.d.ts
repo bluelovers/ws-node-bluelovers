@@ -14,39 +14,39 @@ export interface IOptions {
 export declare type IOptionsArray = [IOptions];
 declare const noIrregularWhitespace: {
     readonly name: "no-irregular-whitespace";
-    meta: {
+    readonly meta: {
         readonly type: "problem";
-        docs: {
+        readonly docs: {
             readonly description: "disallow irregular whitespace";
             readonly category: "Possible Errors";
             readonly recommended: true;
             readonly url: "https://eslint.org/docs/rules/no-irregular-whitespace";
         };
-        messages: {
+        readonly messages: {
             readonly noIrregularWhitespace: "Irregular whitespace not allowed.";
         };
-        schema: readonly [{
+        readonly schema: readonly [{
             readonly type: "object";
-            properties: {
-                skipComments: {
+            readonly properties: {
+                readonly skipComments: {
                     readonly type: "boolean";
                     readonly default: false;
                 };
-                skipStrings: {
+                readonly skipStrings: {
                     readonly type: "boolean";
                     readonly default: true;
                 };
-                skipTemplates: {
+                readonly skipTemplates: {
                     readonly type: "boolean";
                     readonly default: false;
                 };
-                skipRegExps: {
+                readonly skipRegExps: {
                     readonly type: "boolean";
                     readonly default: false;
                 };
-                ignores: {
+                readonly ignores: {
                     readonly type: "array";
-                    items: {
+                    readonly items: {
                         readonly type: "string";
                     };
                 };

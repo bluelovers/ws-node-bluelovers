@@ -46,6 +46,8 @@ export interface IOptions
 
 export type IOptionsArray = [IOptions];
 
+const ERROR_MESSAGE = "Irregular whitespace not allowed.";
+
 const noIrregularWhitespace = {
 
 	name: "no-irregular-whitespace",
@@ -61,7 +63,7 @@ const noIrregularWhitespace = {
 		},
 
 		messages: {
-			noIrregularWhitespace: "Irregular whitespace not allowed."
+			noIrregularWhitespace: ERROR_MESSAGE
 		},
 
 		schema: [
@@ -324,6 +326,7 @@ const noIrregularWhitespace = {
 				// @ts-ignore
 				node,
 				messageId: "noIrregularWhitespace",
+//				message: ERROR_MESSAGE,
 				//message: "Irregular whitespace not allowed.",
 				loc,
 			});
