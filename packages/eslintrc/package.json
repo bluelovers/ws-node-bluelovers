@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluelovers",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "my eslint config with @typescript-eslint/eslint-plugin",
   "keywords": [
     "bluelovers",
@@ -27,7 +27,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@bluelovers/eslint-plugin": "^1.0.8",
+    "@bluelovers/eslint-plugin": "^1.0.10",
     "@yarn-tool/find-tsconfig": "^1.0.0"
   },
   "devDependencies": {
