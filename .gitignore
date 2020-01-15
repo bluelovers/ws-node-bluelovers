@@ -57,3 +57,4 @@ tests/temp*
 
 *.tgz
 node_modules
+*.tsbuildinfo
