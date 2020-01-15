@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/tsconfig",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "my base tsconfig",
   "keywords": [
     "preset",
@@ -17,7 +17,7 @@
     "url": "git+https://github.com/bluelovers/ws-node-bluelovers.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "tsconfig.json",
   "scripts": {
     "postpublish": "git commit -m \"publish new version\" .",

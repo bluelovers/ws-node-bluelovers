@@ -3,6 +3,8 @@
     "module": "CommonJS",
     "target": "esnext",
 
+    "jsx": "preserve",
+
     "moduleResolution": "node",
     "allowJs": false,
 
