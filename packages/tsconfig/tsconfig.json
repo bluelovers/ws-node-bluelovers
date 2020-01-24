@@ -6,7 +6,7 @@
     "jsx": "preserve",
 
     "moduleResolution": "node",
-    "allowJs": false,
+    "allowJs": true,
 
     "allowUmdGlobalAccess": false,
 
@@ -20,14 +20,15 @@
     "emitDecoratorMetadata": true,
 
     "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
 
     "strict": false,
 
-    "resolveJsonModule": true,
-
     "strictBindCallApply": true,
-    "noImplicitThis": true,
     "strictNullChecks": false,
+    "strictFunctionTypes": true,
+
+    "noImplicitThis": true,
 
     "preserveConstEnums": true,
 
@@ -36,6 +37,8 @@
     "showConfig": true,
 
     "incremental": true,
+
+    "noErrorTruncation": true,
 
     "locale": "zh-TW",
     "pretty": true,
