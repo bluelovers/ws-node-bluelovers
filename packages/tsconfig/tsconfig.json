@@ -6,7 +6,7 @@
     "jsx": "preserve",
 
     "moduleResolution": "node",
-    "allowJs": true,
+    "allowJs": false,
 
     "allowUmdGlobalAccess": false,
 
