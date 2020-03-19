@@ -20,7 +20,7 @@
   "author": "bluelovers",
   "main": "tsconfig.json",
   "scripts": {
-    "postpublish_": "git commit -m \"publish new version\" .",
+    "postpublish_": "git commit -m \"chore(release): publish\" .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "publishConfig": {

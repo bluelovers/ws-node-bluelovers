@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "module": "CommonJS",
-    "target": "esnext",
+    "target": "ES2019",
+    //"target": "esnext",
 
     "jsx": "preserve",
 
