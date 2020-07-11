@@ -1,5 +1,5 @@
 {
-  "extends": "../esm/module",
+  "extends": "../esm/module.json",
   "compilerOptions": {
     "jsx": "preserve",
     "lib": [

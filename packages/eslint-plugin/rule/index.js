@@ -2,10 +2,13 @@
 /**
  * Created by user on 2019/6/1.
  */
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const no_irregular_whitespace_1 = require("./no-irregular-whitespace");
+const no_irregular_whitespace_1 = __importDefault(require("./no-irregular-whitespace"));
 const rules = {
     "@bluelovers/no-irregular-whitespace": no_irregular_whitespace_1.default,
 };
 exports.default = rules;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUE7O0dBRUc7O0FBRUgsdUVBQThEO0FBRTlELE1BQU0sS0FBSyxHQUFHO0lBQ2IscUNBQXFDLEVBQUUsaUNBQXFCO0NBQ25ELENBQUM7QUFFWCxrQkFBZSxLQUFLLENBQUEiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIENyZWF0ZWQgYnkgdXNlciBvbiAyMDE5LzYvMS5cbiAqL1xuXG5pbXBvcnQgbm9JcnJlZ3VsYXJXaGl0ZXNwYWNlIGZyb20gJy4vbm8taXJyZWd1bGFyLXdoaXRlc3BhY2UnO1xuXG5jb25zdCBydWxlcyA9IHtcblx0XCJAYmx1ZWxvdmVycy9uby1pcnJlZ3VsYXItd2hpdGVzcGFjZVwiOiBub0lycmVndWxhcldoaXRlc3BhY2UsXG59IGFzIGNvbnN0O1xuXG5leHBvcnQgZGVmYXVsdCBydWxlc1xuIl19
+//# sourceMappingURL=index.js.map

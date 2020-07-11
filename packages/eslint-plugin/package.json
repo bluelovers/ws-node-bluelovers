@@ -25,26 +25,24 @@
     "url": "git+https://github.com/bluelovers/ws-node-bluelovers.git"
   },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "coverage": "npx nyc npm run test",
-    "lint": "npx eslint **/*.ts",
-    "ncu": "npx yarn-tool ncu -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json && npm run test",
-    "postpublish_": "git commit -m \"publish new version\" .",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "npx ts-node ./test/rule/no-irregular-whitespace"
+    "test": "npx ts-node ./test/rule/no-irregular-whitespace",
+    "preversion": "yarn run prepublishOnly",
+    "prepublishOnly": "yarn run test",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
     "lodash.clonedeep": "^4.5.0"
   },
-  "devDependencies": {
-    "@typescript-eslint/experimental-utils": "^1.11.0"
-  },
+  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }

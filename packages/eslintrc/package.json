@@ -14,28 +14,36 @@
     "ts",
     "typescript"
   ],
+  "homepage": "https://github.com/bluelovers/ws-node-bluelovers/tree/master/packages/eslintrc#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/ws-node-bluelovers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluelovers/ws-node-bluelovers.git"
+  },
   "license": "ISC",
-  "author": "",
+  "author": "bluelovers",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "coverage": "npx nyc npm run test",
-    "lint": "eslint .",
-    "ncu": "npx npm-check-updates -u",
-    "prepublishOnly": "npm run ncu && npm run sort-package-json && node ./scripts/sort-eslintrc.js",
-    "postpublish_": "git commit -m \"publish new version\" .",
-    "sort-package-json": "npx sort-package-json ./package.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\"",
+    "preversion": "yarn run prepublishOnly",
+    "prepublishOnly": "node ./scripts/sort-eslintrc.js",
+    "prepublishOnly_": "yarn run prepublishOnly:check-bin && yarn run test",
+    "prepublishOnly:check-bin": "ynpx --quiet @yarn-tool/check-pkg-bin",
+    "prepublishOnly:update": "yarn run ncu && yarn run sort-package-json",
+    "ncu": "yarn-tool ncu -u",
+    "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
     "@bluelovers/eslint-plugin": "^1.0.10",
-    "@yarn-tool/find-tsconfig": "^1.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "*",
-    "sort-object-keys2": "^1.1.0"
+    "@yarn-tool/find-tsconfig": "^1.0.26"
   },
   "peerDependencies": {
-    "@bluelovers/eslint-plugin": "^1.0.6",
+    "@bluelovers/eslint-plugin": "^1.0.10",
     "@typescript-eslint/eslint-plugin": "*",
     "eslint": "*"
   },
