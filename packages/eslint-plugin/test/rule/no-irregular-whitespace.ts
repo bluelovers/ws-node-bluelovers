@@ -10,6 +10,7 @@ import { RuleTester } from 'eslint';
 
 const ruleTester = new RuleTester();
 
+// @ts-ignore
 ruleTester.run(noIrregularWhitespace.name, noIrregularWhitespace, {
 	valid: [
 		' ',
