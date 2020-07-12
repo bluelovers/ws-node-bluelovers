@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/tsconfig",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "my base tsconfig",
   "keywords": [
     "preset",

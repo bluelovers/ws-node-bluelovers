@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/eslint-plugin",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "",
   "keywords": [
     "bluelovers",
@@ -42,7 +42,6 @@
   "dependencies": {
     "lodash.clonedeep": "^4.5.0"
   },
-  "devDependencies": {},
   "publishConfig": {
     "access": "public"
   }
