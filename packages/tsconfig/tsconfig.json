@@ -30,6 +30,7 @@
     "strictFunctionTypes": true,
 
     "noImplicitThis": true,
+    "noImplicitOverride": true,
 
     "preserveConstEnums": true,
 
@@ -48,5 +49,8 @@
 
     "traceResolution": false,
     "newLine": "lf"
+  },
+  "typeAcquisition": {
+    "enable": true
   }
 }
