@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.22](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.21...@bluelovers/tsconfig@1.0.22) (2021-06-09)
+
+
+### ✨　Features
+
+* add tsdx presets ([1e2cc2a](https://github.com/bluelovers/ws-node-bluelovers/commit/1e2cc2abb9447eca84e9498f12bc47c0359b1ca5))
+
+
+
+
+
 ## [1.0.21](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.20...@bluelovers/tsconfig@1.0.21) (2021-06-07)
 
 
