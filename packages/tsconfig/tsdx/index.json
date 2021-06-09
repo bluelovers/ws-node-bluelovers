@@ -1,0 +1,15 @@
+{
+  "extends": "../esm/module.json",
+  "compilerOptions": {
+    "importHelpers": true,
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "declaration": false,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "skipLibCheck": true,
+    "noEmit": true
+  }
+}

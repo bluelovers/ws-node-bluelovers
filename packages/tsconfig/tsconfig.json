@@ -11,8 +11,8 @@
 
     "allowUmdGlobalAccess": false,
 
-    "sourceMap": false,
-    "inlineSourceMap": true,
+    "sourceMap": true,
+    "inlineSourceMap": false,
     "inlineSources": true,
 
     "declaration": true,
