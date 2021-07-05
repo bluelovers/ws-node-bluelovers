@@ -32,6 +32,8 @@
     "noImplicitThis": true,
     "noImplicitOverride": true,
 
+    "useUnknownInCatchVariables": true,
+
     "preserveConstEnums": true,
 
     "forceConsistentCasingInFileNames": true,
