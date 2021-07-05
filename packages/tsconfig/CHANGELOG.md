@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.23](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.22...@bluelovers/tsconfig@1.0.23) (2021-07-05)
+
+
+### ✨　Features
+
+* `useUnknownInCatchVariables` = true ([8ff04f0](https://github.com/bluelovers/ws-node-bluelovers/commit/8ff04f05e6fdab418d0b53eb6060e2a8af101188))
+
+
+
+
+
 ## [1.0.22](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.21...@bluelovers/tsconfig@1.0.22) (2021-06-09)
 
 
