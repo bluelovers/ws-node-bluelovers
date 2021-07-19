@@ -23,6 +23,9 @@
     "test": "echo \"Error: no test specified\"",
     "postpublish_": "git commit -m \"chore(release): publish\" ."
   },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
   "publishConfig": {
     "access": "public"
   },

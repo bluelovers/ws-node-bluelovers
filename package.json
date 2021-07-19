@@ -17,13 +17,14 @@
     "sort-package-json:ws": "npx yarn-tool ws exec yarn-tool sort"
   },
   "resolutions": {},
+  "dependencies": {
+    "eslint": "^7.4.0",
+    "tslib": "^2.3.0"
+  },
   "devDependencies": {
     "@types/eslint": "^7.2.0",
     "@types/node": "*",
     "@typescript-eslint/experimental-utils": "^3.6.0",
     "sort-object-keys2": "^2.0.3"
-  },
-  "dependencies": {
-    "eslint": "^7.4.0"
   }
 }
