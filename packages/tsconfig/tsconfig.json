@@ -31,6 +31,8 @@
 
     "noImplicitThis": true,
     "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noPropertyAccessFromIndexSignature": true,
 
     "preserveConstEnums": true,
 
