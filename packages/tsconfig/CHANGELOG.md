@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.26](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.25...@bluelovers/tsconfig@1.0.26) (2021-10-11)
+
+
+### ✨　Features
+
+* enable `noUncheckedIndexedAccess` , `noPropertyAccessFromIndexSignature` ([0f9e5e0](https://github.com/bluelovers/ws-node-bluelovers/commit/0f9e5e066f0f85d383287c98cc79f54477589688))
+
+
+
+
+
 ## [1.0.25](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.24...@bluelovers/tsconfig@1.0.25) (2021-07-19)
 
 
