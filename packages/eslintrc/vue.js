@@ -7,7 +7,7 @@ const util_1 = require("./lib/util");
 const eslintrcJson = {
     ...EslintrcJson,
 };
-util_1.addTsconfig(eslintrcJson, {
+(0, util_1.addTsconfig)(eslintrcJson, {
     overwrite: true,
 });
 module.exports = eslintrcJson;

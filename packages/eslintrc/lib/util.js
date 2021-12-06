@@ -8,7 +8,7 @@ const find_tsconfig_1 = require("@yarn-tool/find-tsconfig");
 function addTsconfig(eslintrcJson, options) {
     let { cwd = process.cwd(), overwrite } = options || {};
     if (overwrite || !eslintrcJson.parserOptions.project) {
-        let file = find_tsconfig_1.findTsconfig(cwd);
+        let file = (0, find_tsconfig_1.findTsconfig)(cwd);
         if (file) {
             eslintrcJson.parserOptions.project = file;
         }

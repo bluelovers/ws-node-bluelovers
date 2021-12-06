@@ -55,8 +55,7 @@ const noIrregularWhitespace = {
         ],
     },
     defaultOptions: [
-        "error",
-        {
+        "error", {
             "skipComments": false,
             "skipStrings": false,
             "skipTemplates": false,

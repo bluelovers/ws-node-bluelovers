@@ -6,8 +6,15 @@ const EslintrcJson = require("./.eslintrc.json");
 const util_1 = require("./lib/util");
 const eslintrcJson = {
     ...EslintrcJson,
+    /*
+    rules: Object.assign({
+        ...EslintrcJson.rules,
+    }, {
+        '@bluelovers/no-irregular-whitespace': noIrregularWhitespace,
+    })
+     */
 };
-util_1.addTsconfig(eslintrcJson, {
+(0, util_1.addTsconfig)(eslintrcJson, {
     overwrite: true,
 });
 module.exports = eslintrcJson;

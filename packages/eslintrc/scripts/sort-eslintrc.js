@@ -27,6 +27,16 @@ EslintrcJson.rules = sortObject(EslintrcJson.rules, {
             }
             return a;
         }, []),
+        /*
+        ['semi', '@typescript-eslint/semi'],
+        ['no-extra-parens', '@typescript-eslint/no-extra-parens'],
+        ['func-call-spacing', '@typescript-eslint/func-call-spacing'],
+        ['indent', '@typescript-eslint/indent'],
+        ['no-magic-numbers', '@typescript-eslint/no-magic-numbers'],
+        ['camelcase', '@typescript-eslint/camelcase'],
+        ['no-unused-vars', '@typescript-eslint/no-unused-vars'],
+        ['no-use-before-define', '@typescript-eslint/no-use-before-define'],
+         */
     ], true),
 });
 let json = JSON.stringify(EslintrcJson, null, 2);
