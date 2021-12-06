@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluelovers",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "my eslint config with @typescript-eslint/eslint-plugin",
   "keywords": [
     "bluelovers",
@@ -39,7 +39,7 @@
     "sort-package-json": "yarn-tool sort"
   },
   "dependencies": {
-    "@bluelovers/eslint-plugin": "^1.0.11",
+    "@bluelovers/eslint-plugin": "^1.0.12",
     "@yarn-tool/find-tsconfig": "^1.0.26"
   },
   "peerDependencies": {
