@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.29](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.28...@bluelovers/tsconfig@1.0.29) (2022-04-09)
+
+
+### ✨　Features
+
+* add `moduleDetection` ([749f620](https://github.com/bluelovers/ws-node-bluelovers/commit/749f620a88d1adc8b09816f75134ec66c3563280))
+
+
+### 🔖　Miscellaneous
+
+* . ([564ea07](https://github.com/bluelovers/ws-node-bluelovers/commit/564ea07650dd294938ae8d71795be89a60faf3a5))
+
+
+
+
+
 ## [1.0.28](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.27...@bluelovers/tsconfig@1.0.28) (2021-12-07)
 
 
