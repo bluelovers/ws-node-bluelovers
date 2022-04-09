@@ -5,7 +5,6 @@
  */
 import { TSESTree } from '@typescript-eslint/experimental-utils';
 import { Literal } from '@typescript-eslint/typescript-estree/dist/ts-estree/ts-estree';
-import { RuleContext } from '@typescript-eslint/experimental-utils/dist/ts-eslint';
 export interface IOptions {
     skipComments?: boolean;
     skipStrings?: boolean;

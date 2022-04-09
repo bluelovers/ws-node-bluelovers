@@ -45,12 +45,12 @@ declare const rules: {
             }];
         };
         readonly defaultOptions: readonly ["error", import("./no-irregular-whitespace").IOptions];
-        readonly create: (context: import("@typescript-eslint/experimental-utils/dist/ts-eslint/Rule").RuleContext<string, import("./no-irregular-whitespace").IOptionsArray>) => {
+        readonly create: (context: RuleContext<string, import("./no-irregular-whitespace").IOptionsArray>) => {
             "Program:exit": () => void;
-            Program(node: import("@typescript-eslint/types/dist/ts-estree").Program): void;
-            Identifier(node: import("@typescript-eslint/types/dist/ts-estree").Literal): void;
-            Literal(node: import("@typescript-eslint/types/dist/ts-estree").Literal): void;
-            TemplateElement(node: import("@typescript-eslint/types/dist/ts-estree").TemplateElement): void;
+            Program(node: import("@typescript-eslint/types/dist/generated/ast-spec").Program): void;
+            Identifier(node: import("@typescript-eslint/types/dist/generated/ast-spec").Literal): void;
+            Literal(node: import("@typescript-eslint/types/dist/generated/ast-spec").Literal): void;
+            TemplateElement(node: import("@typescript-eslint/types/dist/generated/ast-spec").TemplateElement): void;
         };
     };
 };

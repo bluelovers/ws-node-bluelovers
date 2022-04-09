@@ -40,10 +40,10 @@
   },
   "dependencies": {
     "@bluelovers/eslint-plugin": "^1.0.12",
-    "@yarn-tool/find-tsconfig": "^1.0.26"
+    "@yarn-tool/find-tsconfig": "^1.0.63"
   },
   "peerDependencies": {
-    "@bluelovers/eslint-plugin": "^1.0.10",
+    "@bluelovers/eslint-plugin": "^1.0.12",
     "@typescript-eslint/eslint-plugin": "*",
     "eslint": "*"
   },
