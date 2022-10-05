@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.31](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.30...@bluelovers/tsconfig@1.0.31) (2022-10-05)
+
+
+
+### 🔖　Miscellaneous
+
+* . ([54d2488](https://github.com/bluelovers/ws-node-bluelovers/commit/54d24881d9fa81ca50055ca3761eb19f981e8a83))
+
+
+
 ## [1.0.30](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.29...@bluelovers/tsconfig@1.0.30) (2022-05-08)
 
 
