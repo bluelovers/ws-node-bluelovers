@@ -5,6 +5,7 @@
   "command": {
     "publish": {
       "concurrency": 1,
+      "loglevel": "silly",
       "ignoreChanges": [
         "**/node_modules/**",
         "**/__snapshots__/**",
@@ -15,21 +16,34 @@
         "*.spec.*",
         "*.test.*",
         "**/test/temp/**",
-        ".gitrepo"
+        ".gitrepo",
+        "lerna.json",
+        "CHANGELOG.md",
+        ".gitignore",
+        "**/tests/**"
       ],
       "message": "chore(release): publish",
       "bump": "patch",
+      "noPrivate": true,
       "conventionalCommits": true,
       "conventionalGraduate": false
     },
     "version": {
+      "concurrency": 1,
+      "noPrivate": true,
       "conventionalCommits": true,
       "changelogPreset": "@bluelovers/conventional-changelog-bluelovers"
     },
     "run": {
+      "concurrency": 1,
       "stream": true
     },
     "exec": {
+      "concurrency": 1,
+      "stream": true
+    },
+    "add": {
+      "concurrency": 1,
       "stream": true
     }
   },

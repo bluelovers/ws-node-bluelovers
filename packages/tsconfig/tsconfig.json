@@ -9,6 +9,9 @@
     "moduleResolution": "node",
     "allowJs": false,
 
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+
     "allowUmdGlobalAccess": false,
 
     "sourceMap": true,
