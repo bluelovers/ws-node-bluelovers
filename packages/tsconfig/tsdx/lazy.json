@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./index.json",
   "compilerOptions": {
     "noUnusedParameters": false,
     "allowUnusedLabels": true,
