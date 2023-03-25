@@ -41,13 +41,10 @@
 
     "forceConsistentCasingInFileNames": true,
 
-    "showConfig": true,
-
     "incremental": true,
 
     "noErrorTruncation": true,
 
-    "locale": "zh-TW",
     "pretty": true,
 
     "removeComments": false,
