@@ -6,7 +6,7 @@
 
     "jsx": "preserve",
 
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "allowJs": false,
 
     "skipDefaultLibCheck": true,
@@ -40,6 +40,7 @@
     "preserveConstEnums": true,
 
     "forceConsistentCasingInFileNames": true,
+    "rewriteRelativeImportExtensions": true,
 
     "incremental": true,
 

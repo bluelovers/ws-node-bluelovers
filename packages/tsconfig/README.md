@@ -1,8 +1,26 @@
 # @bluelovers/tsconfig
 
-    my base tsconfig
+    用於 TypeScript 項目的基礎 tsconfig 配置預設 (Base tsconfig preset for TypeScript projects)
 
 ```
+npm install @bluelovers/tsconfig
+```
+
+## 安裝 (Installation)
+
+```bash
+# 使用 yarn / Using yarn
+yarn add @bluelovers/tsconfig
+
+# 使用 yarn-tool / Using yarn-tool
+yarn-tool add @bluelovers/tsconfig
+# yt 是 yarn-tool 的別名 / yt is an alias for yarn-tool
+yt add @bluelovers/tsconfig
+
+# 使用 pnpm / Using pnpm
+pnpm add @bluelovers/tsconfig
+
+# 使用 npm / Using npm
 npm install @bluelovers/tsconfig
 ```
 

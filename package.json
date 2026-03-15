@@ -35,9 +35,15 @@
     "build:all": "yarn-tool ws run build --concurrency 1",
     "build:since": "yarn run build:all -- --since",
     "ci:install": "yarn install --frozen-lockfile && yarn add -W yarn-tool lerna ynpx ts-node ts-jest jest typescript@next @bluelovers/jest-config",
+    "ci:install:pnpm": "pnpm install --frozen-lockfile && pnpm add --workspace yarn-tool lerna ynpx pnpm typescript ts-node tsx ts-jest jest @bluelovers/jest-config @bluelovers/tsconfig @yarn-tool/require-resolve",
+    "ci:install:yarn": "yarn install --frozen-lockfile && yarn add -W yarn-tool lerna ynpx pnpm typescript ts-node tsx ts-jest jest @bluelovers/jest-config @bluelovers/tsconfig @yarn-tool/require-resolve",
     "ci:build": "echo ci:build",
     "lerna:publish": "yarn run prepublishOnly:root && lerna publish && yarn run postpublishOnly",
     "lerna:publish:yes": "yarn run prepublishOnly:root && lerna publish --yes --bump patch && yarn run postpublishOnly",
+    "lerna:publish:yes:force": "lerna publish --no-private --yes --bump patch --force-publish",
+    "lerna:publish:yes:major": "node --run prepublishOnly:root && lerna publish --no-private --yes --bump major && yarn run postpublishOnly",
+    "lerna:publish:yes:minor": "node --run prepublishOnly:root && lerna publish --no-private --yes --bump minor && yarn run postpublishOnly",
+    "lerna:publish:yes:patch": "node --run prepublishOnly:root && lerna publish --no-private --yes --bump patch && yarn run postpublishOnly",
     "ws:fix-all": "yarn-tool fix-all  --overwriteHostedGitInfo",
     "ws:fix-all:resetStaticFiles": "yarn run ws:fix-all -- --resetStaticFiles",
     "preversion": "yarn run test",
@@ -71,9 +77,10 @@
     "tslib": ">=2"
   },
   "devDependencies": {
-    "@bluelovers/tsconfig": "*",
-    "@types/node": "*",
-    "@yarn-tool/ws-find-up-paths": "*",
-    "sort-object-keys2": "^3.0.2"
+    "@bluelovers/tsconfig": "^1.0.35",
+    "@types/node": "^25.5.0",
+    "@yarn-tool/require-resolve": "^4.0.6",
+    "@yarn-tool/ws-find-up-paths": "^1.0.19",
+    "sort-object-keys2": "^3.0.8"
   }
 }
