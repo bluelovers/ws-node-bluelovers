@@ -1,6 +1,6 @@
 {
   "name": "@bluelovers/tsconfig",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "用於 TypeScript 項目的基礎 tsconfig 配置預設 (Base tsconfig preset for TypeScript projects)",
   "keywords": [
     "tsconfig",

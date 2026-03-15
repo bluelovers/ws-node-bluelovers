@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.1](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.35...@bluelovers/tsconfig@2.0.1) (2026-03-15)
+
+
+### BREAKING CHANGES
+
+* 更新 moduleResolution 及添加 rewriteRelativeImportExtensions
+
+
+
+### 🐛　Bug Fixes
+
+* 更新 moduleResolution 及添加 rewriteRelativeImportExtensions ([831cb55](https://github.com/bluelovers/ws-node-bluelovers/commit/831cb551374c1466ef2bacb78a2013aac0d622d2))
+
+
+
 ## [1.0.35](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.34...@bluelovers/tsconfig@1.0.35) (2024-02-23)
 
 
