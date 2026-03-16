@@ -3,6 +3,16 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.2](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@2.0.1...@bluelovers/tsconfig@2.0.2) (2026-03-16)
+
+
+
+### 🐛　Bug Fixes
+
+* 更新 tsconfig 的 moduleResolution 配置为 bundler ([9090f7e](https://github.com/bluelovers/ws-node-bluelovers/commit/9090f7e104a3fb8c40a5b2d111effcd2a7c5d1ee))
+
+
+
 ## [2.0.1](https://github.com/bluelovers/ws-node-bluelovers/compare/@bluelovers/tsconfig@1.0.35...@bluelovers/tsconfig@2.0.1) (2026-03-15)
 
 
