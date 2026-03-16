@@ -1,7 +1,7 @@
 {
   "extends": "../esm/module.json",
   "compilerOptions": {
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "sourceMap": true,
     "inlineSourceMap": false,
