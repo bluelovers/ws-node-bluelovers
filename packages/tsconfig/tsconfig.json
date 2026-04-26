@@ -40,7 +40,7 @@
     "preserveConstEnums": true,
 
     "forceConsistentCasingInFileNames": true,
-    "rewriteRelativeImportExtensions": true,
+//    "rewriteRelativeImportExtensions": true,
 
     "incremental": true,
 
